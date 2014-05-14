@@ -11,9 +11,7 @@ We plan to run this script on our build server in order to flash routers efficie
 The script makes the following assumptions:
 
 * That the computer running the scripts have wget and tftp installed.
-
 * That your router is a Ubiquiti Picostation 2.
-
 * (Yes. We agree that this last one sucks. Please feel free to improve thise script.)
 
 ## Usage
