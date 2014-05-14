@@ -1,8 +1,8 @@
 #!/bin/bash
 
-IMAGE_URL="http://downloads.openwrt.org/attitude_adjustment/12.09/atheros/generic"
+IMAGE_URL="http://build.sudomesh.org:8080/latest_images/atheros/"
 
-IMAGE_FILE="openwrt-atheros-ubnt2-pico2-jffs2-64k.bin"
+IMAGE_FILE="openwrt-atheros-ubnt2-pico2-jffs2-128k.bin"
 ETH=eth0
 
 if [ "$(id -u)" != "0" ]; then
@@ -37,9 +37,9 @@ mkdir -p openwrt_image
 cd openwrt_image
 
 if [ -f $IMAGE_FILE ]; then
-	echo "OpenWRT image file already downloaded."
+	echo "sudowrt image file already downloaded."
 else
-	echo "Downloading OpenWRT image file."
+	echo "Downloading SudoWRT image file."
 	wget ${IMAGE_URL}/${IMAGE_FILE}
   if [ ! $? -eq 0 ]; then
       echo "Failed to download image file." 1>&2
